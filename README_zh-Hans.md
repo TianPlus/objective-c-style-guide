@@ -64,16 +64,34 @@ UIApplication.sharedApplication.delegate;
 
 * 一个缩进使用 4 个空格，永远不要使用制表符（tab）缩进。请确保在 Xcode 中设置了此偏好。
 * 方法的大括号和其他的大括号（`if`/`else`/`switch`/`while` 等等）始终和声明在同一行开始，在新的一行结束。
+* 二元运算符两侧均要加一个空格，一元运算符和类型转换则不需要空格。
 
 **推荐：**
 ```objc
 if (user.isHappy) {
 // Do something
-}
-else {
+} else {
 // Do something else
 }
+
+NewType a = (NewType)b;
 ```
+
+**反对：**
+
+```objc
+if (user.isHappy)
+{
+// Do something
+} 
+else
+{
+// Do something else
+}
+
+NewType a=(NewType)b;
+```
+
 * 方法之间应该正好空一行，这有助于视觉清晰度和代码组织性。在方法中的功能块之间应该使用空白分开，但往往可能应该创建一个新的方法。
 * `@synthesize` 和 `@dynamic` 在实现中每个都应该占一个新行。
 
@@ -93,12 +111,6 @@ if (!error) {
 ```objc
 if (!error)
     return success;
-```
-
-或
-
-```objc
-if (!error) return success;
 ```
 
 
